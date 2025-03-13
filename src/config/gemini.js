@@ -1,3 +1,4 @@
+//import dotenv from "dotenv";
 import {
     GoogleGenerativeAI,
     HarmCategory,
@@ -5,8 +6,8 @@ import {
   } 
 from "@google/generative-ai";
 
-  
-const apiKey = "AIzaSyBDzRyBf0GByPjXtwxoMhiI1txJVNN8jQk";
+//dotenv.config(); 
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
